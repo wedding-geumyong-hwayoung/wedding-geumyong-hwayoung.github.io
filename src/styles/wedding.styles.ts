@@ -8,10 +8,10 @@ export const Contentsbox = styled.div`
   background: #fff url('/images/background-fabric.png');
 `;
 
-export const MainBanner = styled.section`
+export const MainBanner = styled.section<{ boxHeight: number }>`
   display: flex;
   flex-flow: column nowrap;
-  height: 100vh;
+  height: ${(props) => `${props.boxHeight}px`};
 `;
 
 export const DateTextBox = styled.div`
