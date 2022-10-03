@@ -58,7 +58,28 @@ export const Datetext = styled.p`
 
 export const MainImageBox = styled.div`
   flex: 1;
+  position: relative;
   background: url('/images/main.png') top center / cover no-repeat;
+`;
+
+export const ImageLine1 = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 98%;
+  border: 3px solid #eee;
+`;
+
+export const ImageLine2 = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  border: 1px solid #eee;
 `;
 
 export const InfoTextbox = styled.div`
