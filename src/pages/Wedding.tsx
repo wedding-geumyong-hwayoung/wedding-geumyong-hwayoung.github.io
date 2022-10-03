@@ -10,12 +10,13 @@ import {
   InfoTextbox,
   MainBanner,
   MainImageBox,
+  ScrollSection,
   Wrapper,
 } from '../styles/wedding.styles';
 
 const Wedding = () => {
   return (
-    <Wrapper>
+    <Wrapper id="show-scene-0">
       <Contentsbox>
         <MainBanner boxHeight={window.innerHeight}>
           <DateTextBox>
@@ -35,6 +36,55 @@ const Wedding = () => {
             </InfoText>
           </InfoTextbox>
         </MainBanner>
+
+        <ScrollSection
+          paddingTop={window.innerHeight}
+          className="scroll-section"
+          // id="scroll-section-0"
+        >
+          <div className="sticky-elem main-message">
+            <p>봄물보다 깊으니라</p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>갈산보다 놀으니라</p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>달보다 높으리라</p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>돌보다 굳으리라</p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>사랑을 묻는 이 있거든</p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>
+              이대로만 말하리
+              <span>-한용운, &lt;사랑&gt;-</span>
+            </p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>
+              저희 두 사람이
+              <br />
+              사랑과 믿음으로 하나되는 날,
+            </p>
+          </div>
+
+          <div className="sticky-elem main-message">
+            <p>
+              함께 축복해주시면
+              <br />
+              감사하겠습니다.
+            </p>
+          </div>
+        </ScrollSection>
       </Contentsbox>
     </Wrapper>
   );

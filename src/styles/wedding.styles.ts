@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  &#show-scene-0 #scroll-section-0 .sticky-elem {
+    display: block;
+  }
+`;
 
 export const Contentsbox = styled.div`
   margin: 0 auto;
@@ -101,5 +105,46 @@ export const InfoText = styled.p`
 
   span {
     display: block;
+  }
+`;
+
+export const ScrollSection = styled.section<{ paddingTop: number }>`
+  padding-top: ${(props) => `${props.paddingTop / 2}px`};
+
+  p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+
+    @media screen and (min-width: 700px) {
+      font-size: 35px;
+    }
+
+    span {
+      font-size: 16px;
+      margin-top: 15px;
+
+      @media screen and (min-width: 700px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  & .main-message {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+  }
+
+  & .sticky-elem {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 `;
