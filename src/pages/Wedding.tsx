@@ -2,8 +2,6 @@ import React from 'react';
 import Snowfall from 'react-snowfall';
 import {
   Contentsbox,
-  Datetext,
-  DateTextBox,
   ImageLine1,
   ImageLine2,
   InfoText,
@@ -11,6 +9,8 @@ import {
   MainBanner,
   MainImageBox,
   ScrollSection,
+  TitleText,
+  TitleTextBox,
   Wrapper,
 } from '../styles/wedding.styles';
 
@@ -19,18 +19,34 @@ const Wedding = () => {
     <Wrapper id="show-scene-0">
       <Contentsbox>
         <MainBanner boxHeight={window.innerHeight}>
-          <DateTextBox>
-            <Datetext>
+          <TitleTextBox>
+            <TitleText
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
+            >
               석 금 용<span>and</span>천 화 영
-            </Datetext>
-          </DateTextBox>
+            </TitleText>
+          </TitleTextBox>
           <MainImageBox>
             <Snowfall snowflakeCount={30} />
-            <ImageLine1 />
-            <ImageLine2 />
+            <ImageLine1
+              initial={{ border: 0 }}
+              animate={{ border: '3px solid #eee' }}
+              transition={{ ease: 'easeOut', duration: 1.5, delay: 0.5 }}
+            />
+            <ImageLine2
+              initial={{ border: 0 }}
+              animate={{ border: '1px solid #eee' }}
+              transition={{ ease: 'easeOut', duration: 1.5, delay: 1.5 }}
+            />
           </MainImageBox>
           <InfoTextbox>
-            <InfoText>
+            <InfoText
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 1, delay: 1 }}
+            >
               <span>2022.11.12 PM 03:30</span>
               <span>엘루체컨벤션 6층 스텔라하우스</span>
             </InfoText>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Wrapper = styled.div`
   &#show-scene-0 #scroll-section-0 .sticky-elem {
@@ -18,16 +19,16 @@ export const MainBanner = styled.section<{ boxHeight: number }>`
   height: ${(props) => `${props.boxHeight}px`};
 `;
 
-export const DateTextBox = styled.div`
-  position: relative;
+export const TitleTextBox = styled.div`
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0 15px;
   height: 100px;
 `;
 
-export const Datetext = styled.p`
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
+export const TitleText = styled(motion.p)`
+  position: relative;
   font-family: 'Nanum Myeongjo', serif;
   font-size: 20px;
   color: #868e96;
@@ -66,7 +67,7 @@ export const MainImageBox = styled.div`
   background: url('/images/main.png') top center / cover no-repeat;
 `;
 
-export const ImageLine1 = styled.div`
+export const ImageLine1 = styled(motion.div)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -76,7 +77,7 @@ export const ImageLine1 = styled.div`
   border: 3px solid #eee;
 `;
 
-export const ImageLine2 = styled.div`
+export const ImageLine2 = styled(motion.div)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,15 +88,13 @@ export const ImageLine2 = styled.div`
 `;
 
 export const InfoTextbox = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
 `;
 
-export const InfoText = styled.p`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+export const InfoText = styled(motion.p)`
   width: 100%;
   font-family: 'Nanum Myeongjo', serif;
   font-size: 16px;
